@@ -105,12 +105,8 @@ if (age_1 > age_3){
     console.log("32. Keep calm and look Culture channel")
 }
 
-//  33. Иначе выводите “Technical work”.
-if  (age_1 == 0) 
-{
-console.log("33. Technical work")
-} else 
-    {
+//  33. Иначе выводите “Technical work” (60 - Technical work).
+
     if (age_1 < age_2)
         {
         console.log("33. You don’t have access cause your age is " + age_1 + " It’s less then "+age_2)
@@ -133,16 +129,18 @@ console.log("33. Technical work")
                         }
                     }   
             }
-    }    
+     
 
     //  33v2. Иначе выводите “Technical work”.
-    
-    if (age_1 == age_3 || age_1 <= 0 ) {
-    console.log("33v2. Technical work")
-    } else if (age_1 < age_2){
-        console.log("33v2. You don’t have access cause your age is " + age_1 + " It’s less then " +age_2)
-    } else if (age_1 >= age_2 && age_1 < age_3) {
+    let age_01 = 17
+    let age_02 = 18
+    let age_03 = 60
+    if (age_01 < age_02){
+        console.log("33v2. You don’t have access cause your age is " + age_01 + " It’s less then " +age_02)
+    } else if (age_01 >= age_02 && age_01 < age_03) {
         console.log("33v2. Welcome  !")
-    } else {
+    } else if (age_01 > age_03) {
         console.log("33v2. Keep calm and look Culture channel")
+    } else {
+        console.log ("33v2. Technical work")
     }
