@@ -76,7 +76,7 @@ item_7_type = typeof(item_7)
 console.log ("25. item_7 =", item_7,  ">переменная>",typeof(item_7),"/", "item_7_type =", item_7_type, ">переменная>",typeof(item_7_type),)
 
 //  26. Создать переменную “age_1” и присвоить ей значение 10
-let age_1 = 10
+let age_1 = 60
 
 //  27. Создать переменную “age_2” и присвоить ей значение 18
 let age_2 = 18
@@ -90,7 +90,7 @@ if (age_1){
 }
 //  30. Если age_1 < age_2, вывести в консоль “You don’t have access cause your age is ” + age_1 + “ It’s less then ”
 if (age_1 < age_2){
-    console.log("30. You don’t have access cause your age is " + age_1 + " It’s less then ")
+    console.log("30. You don’t have access cause your age is " + age_1 + " It’s less then " +age_2)
 }
 
 //  31. Если age_1 >=  age_2 и age_1 <  age_3, вывести в консоль “Welcome  !”
@@ -113,7 +113,7 @@ console.log("33. Technical work")
     {
     if (age_1 < age_2)
         {
-        console.log("33. You don’t have access cause your age is " + age_1 + " It’s less then ")
+        console.log("33. You don’t have access cause your age is " + age_1 + " It’s less then "+age_2)
         } else 
             {
             if (age_1 > age_3)
@@ -134,3 +134,15 @@ console.log("33. Technical work")
                     }   
             }
     }    
+
+    //  33v2. Иначе выводите “Technical work”.
+    
+    if (age_1 == age_3 || age_1 == 0) {
+    console.log("33v2. Technical work")
+    } else if (age_1 < age_2){
+        console.log("33v2. You don’t have access cause your age is " + age_1 + " It’s less then " +age_2)
+    } else if (age_1 >= age_2 && age_1 < age_3) {
+        console.log("33v2. Welcome  !")
+    } else {
+        console.log("33v2. Keep calm and look Culture channel")
+    }
