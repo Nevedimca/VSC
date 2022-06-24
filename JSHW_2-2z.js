@@ -17,7 +17,7 @@ const smail_stroka = (smail,stroka) => {
     if (stroka <1) console.log ("Количество строк", stroka, "вводить нельзя!")
 else{
     for (let i = 0; i <= stroka; i++) {
-    console.log(smail.toString().repeat(i)) // smail.toString() - возвращает строку, представляющую объект 
+    console.log(smail.toString().repeat(i)) // smail.toString() - возвращает строку, представляющую объект для "5"
     }
 }
 }
