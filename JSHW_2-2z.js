@@ -12,7 +12,7 @@
 // e.g. function printSmile(stroka, numberOfRows)
 
 
-
+console.log ('----- Задача JSHW_2-2z -----')
 const smail_stroka = (smail,stroka) => {
     if (stroka <1) console.log ("Количество строк", stroka, "вводить нельзя!")
 else{
@@ -27,5 +27,11 @@ smail_stroka (":)",-5)
 smail_stroka (5, 5)
 smail_stroka ('5', 5)
 
+console.log ('----- другие примеры решения JSHW_2-2z -----')
 
-
+function smalik (str, nuberofRows){
+    for (let i = 1; i<= nuberofRows; i++ ) {
+        console.log (str.repeat(i))
+    }
+}
+smalik (':)', 10 )
