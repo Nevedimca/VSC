@@ -27,11 +27,23 @@ smail_stroka (":)",-5)
 smail_stroka (5, 5)
 smail_stroka ('5', 5)
 
-console.log ('----- другие примеры решения JSHW_2-2z -----')
+console.log ('----- Другие примеры решения JSHW_2-2z -----')
 
 function smalik (str, nuberofRows){
     for (let i = 1; i<= nuberofRows; i++ ) {
         console.log (str.repeat(i))
     }
 }
-smalik (':)', 10 )
+smalik (';)', 10 )
+
+console.log ('----- Другие примеры решения JSHW_2-2_2z -----')
+let result = ''
+function smalik2 (str, nuberofRows){
+    for (let i = 1; i<= nuberofRows; i++ ) {
+        result = result + str
+        console.log (result)
+    }
+}
+smalik2 (':(', 10 )
+
+

@@ -16,7 +16,7 @@ for (let i = 0; i <= stroka; i++) {
 }
 
 
-console.log ('----- другие примеры решения JSHW_2-2 -----')
+console.log ('----- Другие примеры решения JSHW_2-2 -----')
 
 let result = ''
 let smile = ';)'
