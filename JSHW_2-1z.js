@@ -22,7 +22,7 @@ exponent(-2)
 exponent(0)
 exponent(4)
 
-console.log ('----- другие примеры решения JSHW_2-1z -----')
+console.log ('----- Другие примеры решения JSHW_2-1z -----')
 
 const pow = function(counter) {
 for (let i=1; i<=counter; i++) {
