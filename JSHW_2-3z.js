@@ -46,15 +46,24 @@ getWordStructure2 ('Check-List')
 
 console.log ('----- Другие примеры решения JSHW_2-3_2z -----')
 
-function getWordStructure2 (word2) {
+function getWordStructure3 (word3) {
     const vowels = 'aeiouy'.split('')
     const conconants = 'bcdfghjklmnpqrstvwxz'.split('')
     let vowelsCount = 0
     let conconantsCount = 0
-    for (const char of word2.toLowerCase()) { 
+    for (const char of word3.toLowerCase()) { 
         if (vowels.indexOf(char) !== -1) vowelsCount++ //indexOf() возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет
         else if (conconants.indexOf(char) !== -1) conconantsCount++
     }
-    console.log(`В слове ${word2} : ${vowelsCount} гласных и ${conconantsCount} согласных букв`)
+    console.log(`В слове ${word3} содержиться: ${vowelsCount} гласных и ${conconantsCount} согласных букв`)
 }
-getWordStructure2 ('Check-List')
+getWordStructure3 ('Check-List')
+
+console.log ('----- Другие примеры решения JSHW_2-3_3z -----')
+
+function getWordStructure4 (word4) {
+    console.log (`В слове ${word4} содержиться: 
+    ${(word4.match(/[aeiouy]/gi)) ? (word4.match(/[aeiouy]/gi)).length :0} гласных и 
+    ${(word4.match(/[bcdfghjklmnpqrstvwxz]/gi)) ? (word4.match(/[bcdfghjklmnpqrstvwxz]/gi)).length :0} согласных букв`)
+}
+getWordStructure4 ('Check-List')
