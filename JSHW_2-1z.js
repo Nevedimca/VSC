@@ -4,6 +4,7 @@
 
 // 1*. Преобразовать 1 задачу в функцию, принимающую на вход степень, в которую будет возводиться число 2
 
+console.log ('----- Задача JSHW_2-1z -----')
 let voz = 2
 const exponent = (exp) =>{
     if (exp <1) {
@@ -20,3 +21,12 @@ exponent(10)
 exponent(-2)
 exponent(0)
 exponent(4)
+
+console.log ('----- Другие примеры решения JSHW_2-1z -----')
+
+const pow = function(counter) {
+for (let i=1; i<=counter; i++) {
+    console.log (2**i) // (2**i) = Math.pow(2,i)
+}
+}
+pow (10)

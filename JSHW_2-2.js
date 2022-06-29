@@ -8,9 +8,18 @@
 // :):):):)
 // :):):):):)
 
-
+console.log ('----- Задача JSHW_2-2 -----')
 let stroka = 5
 for (let i = 0; i <= stroka; i++) {
     let smail = ':)'
     console.log(smail.repeat(i)) //repeat() конструирует и возвращает новую строку, содержащую указанное количество соединённых вместе копий строки, на которой он был вызван.
+}
+
+
+console.log ('----- Другие примеры решения JSHW_2-2 -----')
+
+let result = ''
+let smile = ';)'
+for (let i=1; i<6; i++) {
+    console.log (result += smile)
 }
