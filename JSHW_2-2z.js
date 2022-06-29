@@ -28,7 +28,6 @@ smail_stroka (5, 5)
 smail_stroka ('5', 5)
 
 console.log ('----- Другие примеры решения JSHW_2-2z -----')
-
 function smalik (str, nuberofRows){
     for (let i = 1; i<= nuberofRows; i++ ) {
         console.log (str.repeat(i))
@@ -46,4 +45,12 @@ function smalik2 (str, nuberofRows){
 }
 smalik2 (':(', 10 )
 
-
+console.log ('----- Другие примеры решения JSHW_2-2_3z !СХЕМА! -----')
+const printSmile = function(stroka, numberOfRows) {
+    let result = ''
+    for (let i = 1; i <= numberOfRows; i++) {
+        result += stroka
+        console.log(result)
+    }
+}
+printSmile(':)', 5)

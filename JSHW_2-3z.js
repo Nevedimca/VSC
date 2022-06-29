@@ -29,7 +29,7 @@ getWordStructure('aeyae')
 
 console.log ('----- Другие примеры решения JSHW_2-3z -----')
 
-function getWordStructure2 (word2) {
+function getWordStructure5 (word2) {
     const vowels = 'aeiouy'.split('') //split() разбивает объект String на массив строк путём разделения строки указанной подстрокой
     const conconants = 'bcdfghjklmnpqrstvwxz'.split('')
     // console.log (vowels2, conconants)
@@ -42,7 +42,7 @@ function getWordStructure2 (word2) {
     }
     console.log(`В слове ${word2} : ${vowelsCount} гласных и ${conconantsCount} согласных букв`)
 }
-getWordStructure2 ('Check-List')
+getWordStructure5 ('Check-List')
 
 console.log ('----- Другие примеры решения JSHW_2-3_2z -----')
 
@@ -67,3 +67,17 @@ function getWordStructure4 (word4) {
     ${(word4.match(/[bcdfghjklmnpqrstvwxz]/gi)) ? (word4.match(/[bcdfghjklmnpqrstvwxz]/gi)).length :0} согласных букв`)
 }
 getWordStructure4 ('Check-List')
+
+console.log ('----- Другие примеры решения JSHW_2-3_4z !СХЕМА! -----')
+function getWordStructure2(word) {
+    const vowels = 'aeiouy'.split('')
+    const consontants = 'bcdfghjklmnpqrstvwxz'.split('')
+    let numberOfVowels = 0
+    let numberOfConsontants = 0
+    for (char of word.toLowerCase()) {
+        if (vowels.includes(char)) numberOfVowels++
+        if (consontants.includes(char)) numberOfConsontants++
+    }
+    console.log(`Слово ${word} состоит из ${numberOfVowels} гласных и ${numberOfConsontants} согласных букв`)
+}
+getWordStructure2 ('Check-List')

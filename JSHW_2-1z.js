@@ -30,3 +30,14 @@ for (let i=1; i<=counter; i++) {
 }
 }
 pow (10)
+
+console.log ('----- Другие примеры решения JSHW_2-1_2z !СХЕМА! -----')
+
+const power = function(num) {
+    let result = 1
+    for (let i = 1; i <= num; i++) {
+        result = result *2
+    }
+    return result
+}
+console.log(power(10))
