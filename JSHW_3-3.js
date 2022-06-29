@@ -79,4 +79,25 @@ const enterprises = [
   
 
 
-  
+const getDeptartments = function (companies) {
+  companies.forEach((company) => {
+    let depts = [];
+    let count = 0;
+    depts.push(company.name);
+    if (company.departments) {
+      company.departments.forEach((dept) => {
+        count += +dept.employees_count;
+        if (dept.employees_count) {
+          depts.push(`- ${dept.name} (${dept.employees_count} ${employeesCountHelper(dept.employees_count)})`);
+        } else depts.push(`- ${dept.name} (нет сотрудников)`);
+      });
+
+      if (count) {
+        depts[0] += ` (${count} ${employeesCountHelper(count)})`;
+        console.log(depts[0])
+      } else depts[0] += ` (нет сотрудников)`;
+    }
+    console.log(depts.join(`\n\ `));
+  });
+};
+getDeptartments(enterprises);
