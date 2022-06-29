@@ -102,3 +102,13 @@ const usersFiltered = users.filter((user) => {
     }
 })
 console.log (usersFiltered);
+
+console.log ('----- Другие примеры решения JSHW_3-1_3z -----')
+const userUnique = users.filter (el => (el.registrationDate == '09.10.2021' || el.registrationDate === '10.10.2021'))
+console.log (userUnique)
+
+console.log ('----- Другие примеры решения JSHW_3-1_4z -----')
+function unique (date1,date2){
+    return users.filter (el => (el.registrationDate == date1 || el.registrationDate === date2))
+}
+console.log(unique('09.10.2021','10.10.2021'))
