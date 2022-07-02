@@ -67,7 +67,7 @@ const enterprises = [
   
 
   
-console.log ('----- Задача JSHW_3-3_2 !СХЕМА! -----')
+console.log ('----- Задача JSHW_3-3_2 -----')
 
 
 const getEnterpriseByDepartment = function(val){
@@ -84,3 +84,21 @@ const getEnterpriseByDepartment = function(val){
 
 console.log(getEnterpriseByDepartment(1))
 console.log(getEnterpriseByDepartment(6))
+
+
+// console.log ('----- Задача JSHW_3-3_2v2 !СХЕМА! -----')
+// const getEnterpriseName = function(searchId) {
+//   let counter = 0
+//   enterprises.forEach((item) => {
+//     if (item.departments) {
+//       item.departments.forEach((dep) => {
+//           if (dep.id == searchId || dep.name == searchId) {
+//             console.log(item.name) 
+//             counter++
+//           } 
+//       })
+//     }
+//   }  )
+//   counter == 0 ? console.log('No such enterprise') : false
+// }  
+// console.log(getEnterpriseName(5))
