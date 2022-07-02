@@ -77,27 +77,30 @@ const enterprises = [
 //   Предприятие 3 (нет сотрудников)
 //   - Отдел аналитики (нет сотрудников)
   
+console.log ('----- Задача JSHW_3-3_1 !СХЕМА! -----')
 
+const employeesCountHelper = function (number) {
+  lastNumber = number.toString().split('').pop()
+  if (lastNumber && number) {
+    if (lastNumber == 1) return `${number} сотрудник`
+    else if (lastNumber > 1 && lastNumber <5) return `${number} сотрудника`
+    else return `${number} сотрудников`
+ }else return "нет сотрудников"
+}
 
-const getDeptartments = function (companies) {
-  companies.forEach((company) => {
-    let depts = [];
-    let count = 0;
-    depts.push(company.name);
-    if (company.departments) {
-      company.departments.forEach((dept) => {
-        count += +dept.employees_count;
-        if (dept.employees_count) {
-          depts.push(`- ${dept.name} (${dept.employees_count} ${employeesCountHelper(dept.employees_count)})`);
-        } else depts.push(`- ${dept.name} (нет сотрудников)`);
-      });
-
-      if (count) {
-        depts[0] += ` (${count} ${employeesCountHelper(count)})`;
-        console.log(depts[0])
-      } else depts[0] += ` (нет сотрудников)`;
+const getSructure = function(company) {
+  company.forEach (comp => {
+    let depts = []
+    let count = 0
+    depts.push (comp.name)
+    if(comp.departments) {
+      comp.departments.forEach(dept => {
+        count += dept.employees_count
+        depts.push (`- ${dept.name} ${employeesCountHelper(dept.employees_count)}`) 
+      })
+      depts [0] += ` (${employeesCountHelper(count)})`
     }
     console.log(depts.join(`\n\ `));
-  });
-};
-getDeptartments(enterprises);
+  })
+}
+getSructure(enterprises)

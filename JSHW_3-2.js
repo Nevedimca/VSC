@@ -23,3 +23,5 @@ function uniqueFunc1(){
 }
 console.log(uniqueFunc1())
 
+
+
