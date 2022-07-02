@@ -66,15 +66,49 @@ const enterprises = [
 
   
 
+  // console.log ('----- Задача JSHW_3-3_3  -----')
+
+  const getNewId = function (company) {  //функция на максимальный id+1
+    let maxId = 0
+    company.forEach(comp => {
+      if (maxId < comp.id) maxId = comp.id
+      if (comp.departments){
+        comp.departments.forEach (dept =>{
+          if (maxId < dept.id) maxId = dept.id
+        })
+      }
+    });
+    return maxId+1
+  }
+  // console.log(getNewId(enterprises))
+  
+  
+  const addEnterprise = function(name) {
+    enterprises.push({
+      id: getNewId(enterprises),
+      name: name,
+      departments:[]
+    })
+  }
+  addEnterprise ('Test1')
+  // console.log(enterprises)
+
 console.log ('----- Задача JSHW_3-3_4 -----')
 
-const getEnterprise = function (val) { // поиск организации
+const getEnterprises = function (val) { // поиск организации
   let enterprisesWork = enterprises.find (el => el.id === val || el.name === val)
   return enterprisesWork ? enterprisesWork : false
 }
-// console.log(getEnterprise(5))
-// console.log(getEnterprise("Предприятие 2"))
+// console.log(getEnterprises(5))
+// console.log(getEnterprises("Предприятие 2"))
 
 const addDepartment = function (entId, name, count = 0) {
-
+  const enterprisesWork = getEnterprises (entId)
+  if (enterprisesWork) enterprisesWork.departments.push({
+    id: getNewId(enterprises),
+    name: name,
+    employees_count: count
+  })
 }
+addDepartment(11, 'qa', 20)
+console.log(enterprises[3])

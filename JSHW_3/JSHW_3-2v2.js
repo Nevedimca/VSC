@@ -11,7 +11,6 @@
 console.log ('----- Задача JSHW_3-2v2 -----')
 const fs = require('fs')
 let user = JSON.parse(fs.readFileSync('task2.json'))
-
 // console.log(user)
 
 let unique = Array.from (new Set(user.map((item)=>JSON.stringify(item)))).map((item) => JSON.parse(item))
