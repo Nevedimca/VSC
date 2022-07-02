@@ -10,7 +10,7 @@
 
 console.log ('----- Задача JSHW_3-2 -----')
 const fs = require('fs')
-let user = JSON.parse(fs.readFileSync('task2.json'))
+let user = JSON.parse(fs.readFileSync('./JSHW_3/task2.json'))
 
 // console.log(user)
 
