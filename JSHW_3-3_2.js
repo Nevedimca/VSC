@@ -79,7 +79,7 @@ const getEnterpriseByDepartment = function(val){
     }
     if (departmentsWork) enterprisesWork = ent
   })
-  return  enterprisesWork ? enterprisesWork : `Нет организации с id == ${val} или именем == ${val}`//<= обект, а так enterprisesWork ? enterprisesWork.name - имя
+  return  enterprisesWork ? enterprisesWork : `Нет организации с id (именем): ${val-1} `//<= обект, а так enterprisesWork ? enterprisesWork.name - имя
 }
 
 console.log(getEnterpriseByDepartment(1))

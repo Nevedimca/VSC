@@ -73,12 +73,12 @@ const enterprises = [
     }
   ]
   
-//   Задания:
+
 
   
 console.log ('----- Задача JSHW_3-3_1 !СХЕМА! -----')
 
-const employeesCountHelper = function (number) {
+const employeesCountHelper = function (number) { //функция на сотудник(ка(ков))
   lastNumber = number.toString().split('').pop()
   if (lastNumber && number) {
     if (lastNumber == 1) return `${number} сотрудник`
@@ -86,6 +86,7 @@ const employeesCountHelper = function (number) {
     else return `${number} сотрудников`
  }else return "нет сотрудников"
 }
+// console.log(employeesCountHelper(21))
 
 const getSructure = function(company) {
   company.forEach (comp => {

@@ -2,10 +2,10 @@
 // Task 3**
 // В файле task3.txt найдете структуру компании и задания, необходимые выполнить.
 
-//   3. Написать функцию, которая будет добавлять предприятие. В качестве аргумента принимает название предприятия
+//   4. Написать функцию, которая будет добавлять отдел в предприятие. В качестве аргумента принимает id предприятия, в которое будет добавлен отдел и название отдела.
   
 //   Пример:
-//   addEnterprise("Название нового предприятия")
+//   addDepartment(1, "Название нового отдела")
 
 const enterprises = [
     {
@@ -66,29 +66,15 @@ const enterprises = [
 
   
 
-console.log ('----- Задача JSHW_3-3_3  -----')
+console.log ('----- Задача JSHW_3-3_4 -----')
 
-const getNewId = function (company) {  //функция на максимальный id+1
-  let maxId = 0
-  company.forEach(comp => {
-    if (maxId < comp.id) maxId = comp.id
-    if (comp.departments){
-      comp.departments.forEach (dept =>{
-        if (maxId < dept.id) maxId = dept.id
-      })
-    }
-  });
-  return maxId+1
+const getEnterprise = function (val) { // поиск организации
+  let enterprisesWork = enterprises.find (el => el.id === val || el.name === val)
+  return enterprisesWork ? enterprisesWork : false
 }
-// console.log(getNewId(enterprises))
+// console.log(getEnterprise(5))
+// console.log(getEnterprise("Предприятие 2"))
 
+const addDepartment = function (entId, name, count = 0) {
 
-const addEnterprise = function(name) {
-  enterprises.push({
-    id: getNewId(enterprises),
-    name: name,
-    departments:[]
-  })
 }
-addEnterprise ('Test1')
-console.log(enterprises)
