@@ -70,5 +70,8 @@ const enterprises = [
 console.log ('\n----- Задача JSHW_3-3_7 -----\n')
 
 const deleteEnterprises = function (val) {
-  const id = enterprises.findIndex()
+  const index = enterprises.findIndex(el => el.id ===val)
+  enterprises.splice(index,1) //index,1 - сколько после индекса удалять 
 }
+deleteEnterprises(5)
+console.log(enterprises)

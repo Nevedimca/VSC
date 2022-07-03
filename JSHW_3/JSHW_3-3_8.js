@@ -2,10 +2,10 @@
 // Task 3**
 // В файле task3.txt найдете структуру компании и задания, необходимые выполнить.
 
-//   6. Написать функцию для редактирования названия отдела. Принимает в качестве аргумента id отдела и новое имя отдела.
+//   8. Написать функцию для удаления отдела. В качестве аргумента принимает id отдела. Удалить отдел можно только, если в нем нет сотрудников.
   
 //   Пример:
-//   editDepartment(7, "Новое название отдела")
+//   deleteDepartment(3)
 
 const enterprises = [
     {
@@ -62,30 +62,21 @@ const enterprises = [
       ]
     }
   ]
-  
 
-  
 
-console.log ('\n----- Задача JSHW_3-3_6 -----\n')
 
-const getDeptartments = function (val) { //поиск отделов 
-  let departmentsWork
-  enterprises.forEach(company =>{
-    const dept = company.departments.find((el) =>{
-      return el.id == val || el.name == val
-    })
-    if (dept) departmentsWork = dept
+console.log ('\n----- Задача JSHW_3-3_8 -----\n')
+
+const deleteDepartment = function(val){
+  enterprises.forEach(e => {
+    let index = e.departments.findIndex(d => d.id === val && d.employees_count === 0)
+    if (index !== - 1) {
+      e.departments.splice(index,1)
+    }
   })
-  return departmentsWork ? departmentsWork : false
 }
+deleteDepartment(10)
+console.log(enterprises[2])
 
-  // console.log(getDeptartments(6))
-  // console.log(getDeptartments("Отдел маркетинга"))
 
-  const editDepartment = function(val,name){
-    const departmentsWork = getDeptartments (val)
-    if (departmentsWork) departmentsWork.name = name
-    else throw new Error ('Нету такого отдела')
-  }
-editDepartment(6,'Test3')
-console.log(enterprises[1])
+
