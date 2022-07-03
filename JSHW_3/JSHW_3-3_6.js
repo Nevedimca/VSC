@@ -66,7 +66,7 @@ const enterprises = [
 
   
 
-console.log ('----- Задача JSHW_3-3_6 -----')
+console.log ('\n----- Задача JSHW_3-3_6 -----\n')
 
 const getDeptartments = function (val) { //поиск отделов 
   let departmentsWork

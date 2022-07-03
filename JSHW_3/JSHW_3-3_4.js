@@ -82,7 +82,6 @@ const enterprises = [
   }
   // console.log(getNewId(enterprises))
   
-  
   const addEnterprise = function(name) {
     enterprises.push({
       id: getNewId(enterprises),
@@ -93,7 +92,7 @@ const enterprises = [
   addEnterprise ('Test1')
   // console.log(enterprises)
 
-console.log ('----- Задача JSHW_3-3_4 -----')
+console.log ('\n----- Задача JSHW_3-3_4 -----\n')
 
 const getEnterprises = function (val) { // поиск организации
   let enterprisesWork = enterprises.find (el => el.id === val || el.name === val)

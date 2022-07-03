@@ -76,7 +76,7 @@ const enterprises = [
 
 
   
-console.log ('----- Задача JSHW_3-3_1 !СХЕМА! -----')
+console.log ('\n----- Задача JSHW_3-3_1 !СХЕМА! -----\n')
 
 const employeesCountHelper = function (number) { //функция на сотудник(ка(ков))
   lastNumber = number.toString().split('').pop()

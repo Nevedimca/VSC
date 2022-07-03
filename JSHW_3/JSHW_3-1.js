@@ -95,7 +95,7 @@ const searchUsers = (people) => {
 
 searchUsers(users)
 
-console.log ('----- Другие примеры решения JSHW_3-1_2z !СХЕМА! -----')
+console.log ('\n----- Другие примеры решения JSHW_3-1_2z !СХЕМА! -----\n')
 const usersFiltered = users.filter((user) => {
     if (user.registrationDate === '09.10.2021' || user.registrationDate === '10.10.2021') {
         return user;
@@ -103,11 +103,11 @@ const usersFiltered = users.filter((user) => {
 })
 console.log (usersFiltered);
 
-console.log ('----- Другие примеры решения JSHW_3-1_3z -----')
+console.log ('\n----- Другие примеры решения JSHW_3-1_3z -----\n')
 const userUnique = users.filter (el => (el.registrationDate == '09.10.2021' || el.registrationDate === '10.10.2021'))
 console.log (userUnique)
 
-console.log ('----- Другие примеры решения JSHW_3-1_4z -----')
+console.log ('\n----- Другие примеры решения JSHW_3-1_4z -----\n')
 function unique (date1,date2){
     return users.filter (el => (el.registrationDate == date1 || el.registrationDate === date2))
 }

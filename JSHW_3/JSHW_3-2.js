@@ -8,7 +8,7 @@
 // Task 2*** Реализуйте считывание из JSONки из файла task2.json с помощью, например, модуля fs. для дальнейшего использования в функции, описанной в задании
 
 
-console.log ('----- Задача JSHW_3-2 -----')
+console.log ('\n----- Задача JSHW_3-2 -----\n')
 const fs = require('fs')
 let user = JSON.parse(fs.readFileSync('./JSHW_3/task2.json'))
 

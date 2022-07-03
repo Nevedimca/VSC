@@ -2,10 +2,10 @@
 // Task 3**
 // В файле task3.txt найдете структуру компании и задания, необходимые выполнить.
 
-//   5. Написать функцию для редактирования названия предприятия. Принимает в качестве аргумента id предприятия и новое имя предприятия.
+//   7. Написать функцию для удаления предприятия. В качестве аргумента принимает id предприятия.
   
 //   Пример:
-//   editEnterprise(1, "Новое название предприятия")
+//   deleteEnterprise(1)
 
 const enterprises = [
     {
@@ -64,24 +64,11 @@ const enterprises = [
   ]
   
 
+
   
 
-  // console.log ('----- Задача JSHW_3-3_4 -----')
+console.log ('\n----- Задача JSHW_3-3_7 -----\n')
 
-  const getEnterprises = function (val) { // поиск предприятия (организации)
-    let enterprisesWork = enterprises.find (el => el.id === val || el.name === val)
-    return enterprisesWork ? enterprisesWork : false
-  }
-  // console.log(getEnterprises(5))
-  // console.log(getEnterprises("Предприятие 2"))
-
-console.log ('----- Задача JSHW_3-3_5 -----')
-
-const editEnterprise = function (val, name) {
-  const enterprisesWork = getEnterprises (val)
-  if (enterprisesWork) enterprisesWork.name = name
-  else throw new Error ('Нету такого предпрития')
+const deleteEnterprises = function (val) {
+  const id = enterprises.findIndex()
 }
-console.log(enterprises,editEnterprise(1,'Test'))
-console.log ('\n------------------\n')
-console.log(enterprises,editEnterprise('Предприятие 3','Test2'))

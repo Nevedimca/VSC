@@ -67,8 +67,7 @@ const enterprises = [
   
 
   
-console.log ('----- Задача JSHW_3-3_2 -----')
-
+console.log ('\n----- Задача JSHW_3-3_2 -----\n')
 
 const getEnterpriseByDepartment = function(val){
   let enterprisesWork

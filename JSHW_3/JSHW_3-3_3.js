@@ -66,7 +66,7 @@ const enterprises = [
 
   
 
-console.log ('----- Задача JSHW_3-3_3  -----')
+console.log ('\n----- Задача JSHW_3-3_3  -----\n')
 
 const getNewId = function (company) {  //функция на максимальный id+1
   let maxId = 0
